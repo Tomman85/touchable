@@ -37,6 +37,8 @@ class TouchCanvasUtil {
         return (gestureDetail as ScaleUpdateDetails).localFocalPoint;
       case ForcePressDetails:
         return (gestureDetail as ForcePressDetails).localPosition;
+      case PointerDownEvent:
+        return(gestureDetail as PointerDownEvent).localPosition;
       default:
         throw Exception("gestureDetail.runTimeType = ${gestureDetail.runtimeType} is not recognized ! ");
     }
