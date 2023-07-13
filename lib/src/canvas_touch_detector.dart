@@ -43,9 +43,7 @@ class _CanvasTouchDetectorState extends State<CanvasTouchDetector> {
             },
           ),
           onPointerDown: (details) {
-            (tapDetail) {
-              touchController.add(Gesture(GestureType.onTapDown, tapDetail));
-            };
+              touchController.add(Gesture(GestureType.onTapDown, details));
           },
         ));
   }
